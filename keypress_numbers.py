@@ -5,7 +5,7 @@
 #    クリックではなく(1の位の)数値キーを押すように変更
 ##################################
 import click_numbers
-import tkinter as tk
+from tkinter import messagebox
 
 class KeyPress_Numbers(click_numbers.Click_Numbers):
     focus_botton = None
@@ -21,7 +21,7 @@ class KeyPress_Numbers(click_numbers.Click_Numbers):
         string = '[ここをクリックすると開始します]をクリックして\n'
         string += '1から数字順にマウスカーソルを移動させ\n'
         string += 'その数字の1の位の数値キーを押してください'
-        tk.messagebox.showinfo('KeyPress_Numbers', string)
+        messagebox.showinfo('KeyPress_Numbers', string)
 
     def enter(self, event):
         self.focus_botton = event.widget
