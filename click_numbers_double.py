@@ -4,7 +4,7 @@
 #    クリックをダブルクリックに変更
 ##################################
 import click_numbers
-import tkinter as tk
+from tkinter import messagebox
 
 class Click_Numbers_Double(click_numbers.Click_Numbers):
     
@@ -15,11 +15,11 @@ class Click_Numbers_Double(click_numbers.Click_Numbers):
             button.bind('<Double-Button>', self.click_number)
         string = '[ここをクリックすると開始します]をクリックして\n'
         string += '1から数字順にダブルクリックしてください'
-        tk.messagebox.showinfo('', string)
+        messagebox.showinfo('', string)
 
 if __name__ == '__main__':
 
     d = Click_Numbers_Double()
-    #d = Click_Numbers_Double(10,10)
+    #d = Click_Numbers_Double(5,5)
 
     d.mainloop()
