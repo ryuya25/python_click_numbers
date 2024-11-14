@@ -38,7 +38,7 @@ class KeyPress_Numbers(click_numbers.Click_Numbers):
 
 if __name__ == '__main__':
 
-    #d = KeyPress_Numbers()
-    d = KeyPress_Numbers(5,5)
+    d = KeyPress_Numbers()
+    #d = KeyPress_Numbers(5,5)
 
     d.mainloop()
